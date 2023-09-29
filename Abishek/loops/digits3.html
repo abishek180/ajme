@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = 925071;
+        let digit;
+        let sum =0;
+        let large1=num%10;
+        let small = num%10;
+        document.write("the number is "+num);
+        for(let i = num;i>0;i=parseInt(i/10)){
+            digit=i%10;
+            sum =sum+digit;
+            if(digit>large1){
+                large1=digit;
+            }
+            if(digit<small){
+                small=digit;
+            }
+            document.write("<br>digits"+digit);
+            
+        }
+        document.write("<br>Sum of digits"+sum);
+        document.write("<br>largest digit"+large1);
+        document.write("<br>smallest digit"+small);
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #para1{
+            border: 1px solid black;
+            width: 200px;
+            margin-left:  auto;
+            margin-right: auto;
+            background-color: red;
+            color: yellow;
+            
+        }
+        #para2{
+            border: 1px solid black;
+            width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: green;
+            color: yellow;
+        }
+        #btn_swap{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function swap(){
+            // alert("hello");
+            let x = document.getElementById("para1").innerHTML;
+            let y = document.getElementById("para2").innerHTML;
+            document.getElementById("para1").innerHTML=y;
+            document.getElementById("para2").innerHTML=x;
+            
+        }
+    </script>
+</head>
+<body>
+   <p id="para1" name="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat dolor, laudantium voluptatum praesentium, non ab eaque atque hic autem quisquam quaerat voluptatem odio velit iste eveniet ex voluptate deserunt deleniti!
+    </p>
+    <hr/>
+    <hr/>
+    <p id="para2" name="para2">Hello World</p>
+    
+    <button onclick="swap()" id="btn_swap" name="btn_swap">Swap</button>
+</body>
+</html>

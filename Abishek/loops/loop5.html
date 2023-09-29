@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /* document.write("hello world");
+        document.write("<hr>");
+        // let x = 5;
+        // let y = 10;
+        let x = prompt("enter first number");
+        let y = prompt("enter second number");
+        // let z = parseInt(x)+parseInt(y);
+        let z = Number(x)+Number(y);
+        let d = Number(x)-Number(y);
+        let m = Number(x)*Number(y);
+        let n = Number(x)/Number(y);
+        let r = Number(x)%Number(y);
+        document.write("<br>sum of &nbsp;" +x+ "&nbsp;and&nbsp;"+ y+ "&nbsp;is&nbsp;"+z);
+        document.write("<br>diff of &nbsp;" +x+ "&nbsp;and&nbsp;"+ y+ "&nbsp;is&nbsp;"+d);
+        document.write("<br>product of &nbsp;" +x+ "&nbsp;and&nbsp;"+ y+ "&nbsp;is&nbsp;"+m);
+        document.write("<br>div of &nbsp;" +x+ "&nbsp;and&nbsp;"+ y+ "&nbsp;is&nbsp;"+n);
+        document.write("<br>reminder of &nbsp;" +x+ "&nbsp;and&nbsp;"+ y+ "&nbsp;is&nbsp;"+r);
+        document.write("<hr>");
+
+        const c = 0.5;
+        let base = prompt("enter base");
+        let height = prompt("enter height");
+        let area_tri = c*base*height;
+        document.write("<br>base of triangle"+base);
+        document.write("<br>height of triangle"+height);
+        document.write("<br>area of triangle"+area_tri);
+        document.write("<hr>")
+
+        let rect_length = prompt("enter length of rectangle");
+        let rect_width = prompt("enter width of rectangle");
+        let rect_area = Number(rect_length)*Number(rect_width);
+        document.write("<br>length of rectangle"+rect_length);
+        document.write("<br>width of rectangle"+rect_width);
+        document.write("<br>area of rectangle"+rect_area);
+        document.write("<hr>")
+
+        const circle = 3.14;
+        let radius =prompt("enter radius");
+        let area_circle = circle*radius*radius;
+        document.write("<br>radius"+radius);
+        document.write("<br>area of circle"+area_circle);
+
+        let num=prompt("enter a number");
+        if(num%2==0){
+            document.write("<br>"+num+"is even");
+        }else{
+            document.write("<br>"+num+"is odd");
+        }
+        
+        if(num > 0){
+            document.write("<br>"+num+"is positive");
+        }else if(num < 0){
+            document.write("<br>"+num+"is negative")
+        }else{
+            document.write("<br>"+num+"is zero");
+        }
+        document.write("<hr>");*/
+
+        let color = prompt("enter color code");
+        if (color == "v"){
+            document.write(" your choice is violet");
+        }else if(color=="i"){
+            document.write("your choice is indigo");
+        }else if(color=="b"){
+            document.write("your choice is blue");
+        }else if(color=="y"){
+            document.write("your choice is yellow");
+        }else{
+            document.write("invalid choice");
+        }
+
+        let hours = prompt("enter hour");
+        let minute = hours*60;
+        let seconds = hours*60*60;
+        document.write("<br>hour"+hours);
+        document.write("<br>minutes"+minute);
+        document.write("<br>seconds"+seconds);
+
+        let days = prompt("enter day");
+        let k1 = 365;
+        let month = Math.trunc(days/12);
+        //let years = parseInt(days)/parseInt(k1);
+        let years= parseInt(days/365);
+        //let years=Math.trunc(days/k1);
+        document.write("<br>days"+days);
+        document.write("<br>months"+month);
+        document.write("<br>year"+years);
+
+
+
+    </script>
+</body>
+</html>

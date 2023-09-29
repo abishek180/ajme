@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+   <head>
+       <title>demo page</title>
+       <style>
+           body{
+	background-color: olive;
+           }
+          
+           #div1{
+	width:50%;
+                     min-height: 200px;	
+                     margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+                     background-color: cyan;	
+                     border:1px solid black;
+	border-radius:10px;
+           }
+
+
+	#outer_wrapper{	
+	width:100%;
+                     min-height:600px;
+                      margin:0px;
+                      border:2px solid black;
+                     border-radius:20px;	
+                 }
+
+	#header_wrapper{	
+	width:100%;
+                     height: 100px;               
+                      margin:0px;
+                      xborder:2px solid black;
+                     text-align:center;
+                 }
+
+
+	#footer_wrapper{	
+	width:100%;
+                     height:20px;
+                      margin-top:100px;
+                      border:2px solid olive;	
+                      text-align:center;
+                 }
+
+                #div2{
+                    margin-top:20px;
+                    text-align:center;
+                     }
+
+	#table1,#div2{
+	    width:100%;
+	border:0px solid black;
+	   margin-left:auto;
+                        margin-right:auto;
+	   background-color: cyan;	
+                        }
+
+                    table,td,th{
+	border:0px solid black;
+	border-collapse:collapse;
+                     }
+
+
+       </style>
+       <script language="javascript"   type="text/javascript">
+           function set_family(){
+	let temp_family=document.getElementById("cmbfamily").value;
+                     // alert(temp_family);
+	document.getElementById("div2").style.fontFamily=temp_family;
+           }
+//---------------------------------------------------
+               function set_size(){
+	let temp_size=document.getElementById("cmbsize").value;
+                     // alert(temp_size);
+	document.getElementById("div2").style.fontSize=temp_size;
+           }
+//--------------------------------------------------
+ function set_bold(){
+	let temp_bold=document.getElementById("txt_bold_hide").value;
+                     if(temp_bold=="0"){
+	document.getElementById("div2").style.fontWeight="normal";
+	document.getElementById("txt_bold_hide").value=1;
+                      }
+	else if(temp_bold=="1"){
+	document.getElementById("div2").style.fontWeight="900";
+	document.getElementById("txt_bold_hide").value=0;
+                      }
+           }
+//--------------------------------------------------
+ function set_italic(){
+	let temp_italic=document.getElementById("txt_italic_hide").value;
+                     if(temp_italic=="0"){
+	document.getElementById("div2").style.fontStyle="normal";
+	document.getElementById("txt_italic_hide").value=1;
+                      }
+	else if(temp_italic=="1"){
+	document.getElementById("div2").style.fontStyle="italic";
+	document.getElementById("txt_italic_hide").value=0;
+                      }
+           }
+//--------------------------------------------------
+ function set_underline(){
+	let temp_underline=document.getElementById("txt_underline_hide").value;
+                     if(temp_underline=="0"){
+	document.getElementById("div2").style.textDecoration="none";
+	document.getElementById("txt_underline_hide").value=1;
+                      }
+	else if(temp_underline=="1"){
+	document.getElementById("div2").style.textDecoration="underline";
+	document.getElementById("txt_underline_hide").value=0;
+                      }
+           }
+//--------------------------------------------------
+
+               function set_align(){
+	let temp_align=document.getElementById("cmbalign").value;
+                     // alert(temp_align);
+	document.getElementById("div2").style.textAlign=temp_align;
+           }
+//--------------------------------------------------
+       </script>
+   </head>
+   <body>
+           <div id="outer_wrapper"  name="outer_wrapper">
+                         <div id="header_wrapper"  name="header_wrapper">
+                                   <!-- <img src="img4.jpg"  alt="sorry filenot found" width="100%"  height="100%"   />-->
+                                       <h1> H E A D E R</h1>
+                          </div>
+      
+             <!-- ----------------------------------------------------------------------  -->
+       	<div id="div1" name="div1" style="width:40%;">
+         	   <form name="frm1" id="frm1" style="width:100%;">
+            	        <table  id="table1" name="table1"  style="width:100%;">
+                                        <tr>
+		<td  style="width:30%;">
+		    <select  name="cmbfamily"  id="cmbfamily"  onchange="set_family()" style="width:100%;">
+			<option  value="Verdana">Verdana</option>
+			<option  value="Arial">Arial</option>
+			<option  value="Helvetica">Helvetica</option>
+			<option  value="Times New Roman">Times New Roman</option>
+			<option  value="Times">Times</option>
+			<option  value="Georgia">Georgia</option>
+                                                               <option  value="Courier New">Courier New</option>
+			<option value="Lucida Handwriting">Lucida Handwriting</option>
+			<option value="Copperplate">Copperplate</option>
+		    </select>
+		</td>
+		<td  style="width:20%;">
+		    <select  name="cmbsize"  id="cmbsize"  onchange="set_size()" style="width:100%;">
+			<option  value="10px">10px</option>
+			<option  value="20px">20px</option>
+			<option  value="30px">30px</option>
+			<option  value="40px">40px</option>
+			<option  value="50px">50px</option>
+			<option  value="60px">60px</option>
+			<option  value="70px">70px</option>
+			<option  value="80px">80px</option>
+			<option  value="90px">90px</option>
+			<option  value="100px">100px</option>			
+		    </select>
+		</td>
+		<td  style="width:10%;">
+		  <input type="button"  name="btn_bold" id="btn_bold"  value="B"  onclick="set_bold()" style="width:100%;"/>
+		<input type="hidden"  name="txt_bold_hide"  id="txt_bold_hide"  value="1"/>
+		</td>
+		<td  style="width:10%;">
+		  <input type="button"  name="btn_italic" id="btn_italic"  value="I"  onclick="set_italic()" style="width:100%;"/>
+		<input type="hidden"  name="txt_italic_hide"  id="txt_italic_hide"  value="1"/>
+		</td>
+		<td  style="width:10%;">
+		  <input type="button"  name="btn_underline" id="btn_underline"  value="U"  onclick="set_underline()" style="width:100%;"/>
+		<input type="hidden"  name="txt_underline_hide"  id="txt_underline_hide"  value="1"/>
+		</td>
+	                    <td  style="width:20%;">
+		    <select  name="cmbalign"  id="cmbalign"  onchange="set_align()" style="width:100%;">
+			<option  value="left">Left</option>
+			<option  value="right">Right</option>
+			<option  value="center">Center</option>
+		     </select>
+                                                 </td>
+                                        </tr>
+                   
+            	          </table>
+		
+         	     </form>
+				 
+      	 </div>
+	<div id="div2" name="div2"  style="width:100%;">
+			Hello world
+		</div>
+
+            <!-- ----------------------------------------------------------------------  -->
+	  <div id="footer_wrapper"  name="footer_wrapper">
+                                  Designed and developed by:
+                          </div>
+
+           </div>
+   </body>
+
+</html>

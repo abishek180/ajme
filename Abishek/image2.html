@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image</title>
+    <link rel="stylesheet" href="image2.css">
+</head>
+<body>
+    <div class="main_container" id="mainct">
+        <div id="img_sec">
+           <img  id="myimg" src="leopard.jpeg" alt="leopard" width="250px" height="250px"> 
+        </div>
+
+       <div class="ctrl_box">
+        <div><input type="color" id="mycolor"/><button onclick="set_color()">C</button></div>
+        <div><select name="slct1" id="slct1" onchange="set_img()">
+            <option value="sea.jpeg">Sea</option>
+            <option value="leopard.jpeg">Leopard</option>
+            <option value="bird.jpeg">Bird</option>
+            <option value="flower.jpg">Flower</option>
+        </select></div>
+    </div>
+
+    </div>
+</body>
+<script src="image2.js"></script>
+</html>

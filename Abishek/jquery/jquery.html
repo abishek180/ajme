@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script>
+
+     $(document).ready(function(){
+
+        $("#hd_btn").click(function(){
+            $("p").hide();
+        });
+        // ----------------------------
+
+        $("#shw_btn").click(function(){
+            $("p").show();
+        });
+        // -----------------------------
+
+        $("p").dblclick(function(){
+            $("p").hide();
+        });
+        // ------end of ready--------
+        
+     });
+            
+        
+        </script>
+</head>
+<body>
+    <p id="p1">Hello World</p>
+    <button id="hd_btn">Click</button>
+    <p id="p2">Welcome to jqery</p>
+    <button id="shw_btn">Show</button>
+    <p class="para1">Hello Jquery</p>
+    <p class="para1">Hello java</p>
+</body>
+</html>

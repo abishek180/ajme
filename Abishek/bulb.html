@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function funOn(){
+            document.getElementById('bulb').src="bulbon.jpg";
+        }
+        // -------
+        function funOff(){
+            document.getElementById('bulb').src="bulboff.png";
+        }
+    </script>
+    <style>
+        #mydiv{
+            width: 500px;
+            border: 1px solid black;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 150px;
+        }
+        #btnon{
+            float: left;
+            margin-top: 150px;
+        }
+        #btnoff{
+            float: right;
+            margin-top: 150px;
+        }
+        body{
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <div id="mydiv">
+        <button  id="btnon" onclick="funOn()">Turn the bulb ON</button>
+        <img  id="bulb" src="bulbon.jpg" alt="img not found" width="200px" height="200px"/>
+
+        <button id="btnoff" onclick="funOff()">Turn the bulb OFF</button>
+    </div>
+</body>
+</html>

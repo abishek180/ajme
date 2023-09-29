@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sum(){
+            let x = document.getElementById("txt_1").value;
+            x=x.trim();
+            document.getElementById("txt_1").value=x;
+
+            let y = document.getElementById("txt_2").value;
+            y=y.trim();
+            document.getElementById("txt_2").value=y;
+
+            let z = (parseInt (x) + parseInt(y));
+
+            document.getElementById("txt_3").value=z;
+
+
+        }
+        // ----------------------
+        function sub(){
+            let x = document.getElementById("txt_1").value;
+            let y = document.getElementById("txt_2").value;
+            let z = (parseInt (x) - parseInt(y));
+            document.getElementById("txt_3").value=z;
+            // alert("difference is " + z );
+
+        }
+        // ---------
+        function division(){
+            let x = document.getElementById("txt_1").value;
+            let y = document.getElementById("txt_2").value;
+            let z = (parseInt (x) / parseInt(y));
+            document.getElementById("txt_3").value=z;
+            // alert("quotient is " + z );
+
+        }
+        // -----
+        function mul(){
+            let x = document.getElementById("txt_1").value;
+            let y = document.getElementById("txt_2").value;
+            let z = (parseInt (x) * parseInt(y));
+            document.getElementById("txt_3").value=z;
+            // alert("product is " + z );
+
+        }
+        // -----------------------
+        function fnclr(){
+            
+            document.getElementById("txt_1").value=0;
+            document.getElementById("txt_2").value=0;
+            document.getElementById("txt_3").value=0;
+        }
+    </script>
+    <style>
+        .calculation{
+            width: 180px;
+            border: 1px solid black;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 120px;
+        }
+        body{
+            background-color: aqua;
+        }
+        #sp{
+            text-align: center;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculation" name="calculation">
+Enter first number
+    <input type="text" id="txt_1" name="txt_1" maxlength="3"><br/>
+    Enter last number
+    <input  type="text" id="txt_2" name="txt_2" maxlength="3"><br/>
+    Result
+    <input type="text" id="txt_3" name="txt_3" readonly R><br/>
+    <div id="sp" name="s">
+    <button onclick="sum()" id="btn_sum" name="btn_sum">+</button>&nbsp;&nbsp;
+    <button onclick="sub()" id="btn_sub" name="btn_sub">-</button>&nbsp;&nbsp;
+    <button onclick="division()" id="btn_div" name="btn_div">/</button>&nbsp;&nbsp;
+    <button onclick="mul()" id="btn_mul" name="btn_mul">*</button>&nbsp;&nbsp;
+    <button onclick="fnclr()" id="btn_clr" name="btn_clr">C</button>
+    </div>
+</div>
+    
+</body>
+</html>

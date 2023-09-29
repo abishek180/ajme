@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: wheat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        table,tr,td{
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        table{
+            width: 10%;
+            border: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.write("<table>");
+        // let num = 25;
+        let num = prompt("enter the number");
+        for(let i = 1;i<=10;i=i+1){
+            document.write("<tr>");
+            document.write("<td>"+i+"</td>"+"<td>*</td>"+"<td>"+num+"</td>"+"<td>=</td>"+"<td>"+i*num+"</td>");
+            document.write("</tr>");
+        }
+        document.write("</table>")
+    </script>
+</body>
+</html>

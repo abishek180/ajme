@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = 9119;
+        let digit;
+        let reverse=0;
+        for(let i = num;i>0;i=parseInt(i/10)){
+            digit=i%10;
+            reverse=(reverse*10)+digit;
+            
+        }
+        document.write(reverse+"the num is reversed"+num);
+        if(reverse==num){
+            document.write("<br>"+reverse+"this number is palindrome"+num);
+        }else{
+            document.write("<br>not a palindrom")
+        }
+    </script>
+</body>
+</html>

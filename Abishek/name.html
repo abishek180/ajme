@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function testfn(){
+            let x=document.getElementById("txt_fname").value;
+            alert("your name is" +x +" "+y);
+            
+            let y=document.getElementById("txt_lname").value;
+            document.getElementById("para1").innerHTML="your name is " +x + " " +y;
+
+        }
+
+    </script>
+</head>
+<body>
+    Enter your Name
+    <input type="text" id="txt_fname" name="txt_fname"><br/>
+    Enter your last Name
+    <input type="text" id="txt_lname" name="txt_lname"><br/>
+    <button name="btnf_name"id="btnf_name" onclick="testfn()" >Click me</button>
+
+<p id="para1" name="para1"></p>
+
+</body>
+</html>

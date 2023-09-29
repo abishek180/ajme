@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="font_demo2.css">
+</head>
+<body>
+    <div class="main_container" id="main_container" name="main_container">
+        <div><select name="sel_family" id="sel_family" onchange="set_fontfamily()">
+            <option value="">Select Font</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Arial">Arial</option>
+            <option value="Helvetica">Helvetica</option>
+            <option value="Times New Roman">Times New Roman </option>
+            <option value=" Times">Times</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Lucida Handwriting">Lucida Handwriting</option>
+        </select>
+    <select name="sel_size" id="sel_size" onchange="set_fontsize()">
+        <option value="0px">Select Size</option>
+        <option value="10px">10px</option>
+        <option value="20px">20px</option>
+        <option value="30px">30px</option>
+        <option value="40px">40px</option>
+        <option value="50px">50px</option>
+        <option value="60px">60px</option>
+        <option value="70px">70px</option>
+        <option value="80px">80px</option>
+        <option value="90px">90px</option>
+        <option value="100px">100px</option>
+    </select>
+<input type="button" value="B" id="btn_bold" name="btn_bold" onclick="set_bold()">
+<input type="hidden" value="0" id="txt_bx1" name="txt_bx1"> 
+<input type="button" value="I" id="btn_italic" name="btn_italic" onclick="set_italic()">
+<input type="hidden" value="0" id="txt_bx2" name="txt_bx2"> 
+<input type="button" value="U" id="btn_under" name="btn_under" onclick="set_under()">
+<input type="hidden" value="0" id="txt_bx3" name="txt_bx3"> 
+<select name="sel_place" id="sel_place" onchange="set_align()">
+    <option value="">Select</option>
+    <option value="center">Center</option>
+    <option value="left">Left</option>
+    <option value="Right">Right</option>
+</select>
+</div>
+<textarea name="txt_area" id="txt_area" cols="60" rows="30"></textarea>
+    </div>
+    <script src="font_demo2.js"></script>
+</body>
+</html>

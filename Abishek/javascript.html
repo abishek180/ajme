@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function showviolet(){
+            document.body.style.backgroundColor = 'violet';
+        }
+        //----------------------------------------
+        function showindigo(){
+            document.body.style.backgroundColor ="indigo";
+        }
+        // ----------------
+        function showblue(){
+            document.body.style.backgroundColor = "blue";
+        }
+        // ---------------
+        function showgreen(){
+            document.getElementById("div1").style.backgroundColor="green";
+        }
+        // ----------
+        function showyellow(){
+            document.getElementById("div1").style.backgroundColor="yellow";
+        }
+        // --------------
+        function showorange(){
+            document.getElementById("div1").style.backgroundColor="orange";
+        }
+        // -------
+        function showred(){
+            document.getElementById("div1").style.backgroundColor="red";
+            // alert(document.getElementById("c1").value);
+            let x=document.getElementById("c1").value;
+            document.body.style.backgroundColor=x;
+        }
+    </script>
+    <style>
+        .mydiv{
+            width: 150px;
+            height: 100px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+
+    <button onclick="showviolet()">V</button>
+    <button onclick="showindigo()">I</button>
+    <button onclick="showblue()">B</button>
+    <button onclick="showgreen()">G</button>
+    <button onclick="showyellow()">Y</button>
+    <button onclick="showorange()">O</button>
+    <button onclick="showred()">R</button>
+    <div class="mydiv" id="div1">
+        
+Hello Javascript
+    </div>
+    <input type="color" id="c1" >
+    
+
+    
+</body>
+</html>

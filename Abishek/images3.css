@@ -1,0 +1,40 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+
+.main-container{
+
+    width: 900px;
+    height: 500px;
+    border: 2px solid black;
+    border-radius: 10px;
+   
+
+}
+.img-sectn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 130px;
+   
+}
+
+.img-sectn img{
+    width: 300px;
+    height: 200px;
+}
+.btn-sectn{
+    padding: 20px;
+    margin-top: 70px;
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+
+}
+.colr_change{
+    
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sum(){
+            document.getElementById("sum").value;
+            let x=document.getElementById("txt_1").value;
+            let y=document.getElementById("txt_2").value;
+            let z= (parseInt(x) + parseInt(y));
+           document.getElementById("txt_3").value = z;
+            
+        }
+        // -------------------
+        function sub(){
+            document.getElementById("sub").value;
+            let x=document.getElementById("txt_1").value;
+            let y=document.getElementById("txt_2").value;
+            let z= (parseInt(x) - parseInt(y));
+           document.getElementById("txt_3").value = z;
+            
+        }
+        // --------------------
+        function division(){
+            document.getElementById("div").value;
+            let x=document.getElementById("txt_1").value;
+            let y=document.getElementById("txt_2").value;
+            let z= (parseInt(x) / parseInt(y));
+           document.getElementById("txt_3").value = z;
+            
+        }
+        // ---------------------------
+        function mul(){
+            document.getElementById("mul").value;
+            let x=document.getElementById("txt_1").value;
+            let y=document.getElementById("txt_2").value;
+            let z= (parseInt(x) * parseInt(y));
+           document.getElementById("txt_3").value = z;
+            
+        }
+    </script>
+
+
+<style>
+    .calculation{
+        width: 180px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top:150px;
+      
+
+}
+body{
+    background-color: olive;
+}
+</style>
+</head>
+<body>
+    <div class="calculation">
+    Enter the first number
+    <input type="text" id="txt_1" name="txt_1" maxlength="3"><br/>
+    Enter the second number
+    <input type="text" id="txt_2" name="txt_2" maxlength="3"><br/>
+    Result
+    <input type="text" id="txt_3" name="txt_3" readonly><br/>
+    <button onclick="sum()" id="sum" name="sum" >+</button>
+    <button onclick="sub()" id="sub" name="sub" >-</button>
+    <button onclick="division()" id="div" name="div" >/</button>
+    <button onclick="mul()" id="mul" name="mul" >*</button>
+</div>
+</body>
+</html>

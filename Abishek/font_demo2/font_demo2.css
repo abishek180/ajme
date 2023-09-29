@@ -1,0 +1,23 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+}
+
+
+.main_container{
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    margin-top: 30px;
+    text-align: center;
+}
+#txt_area{
+     width: 98%;
+     height: 93%;
+     resize: none;
+}

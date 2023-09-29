@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myfunction1(){
+            alert("Hello");
+            document.body.style.backgroundColor="red";
+            document.getElementById("para1").innerHTML="Hello Javascript";
+        }
+        // ----------
+        function myfunction2(){
+            alert("javascript");
+            document.body.style.backgroundColor="green";
+            document.getElementById("para2").innerHTML="Thankyou";
+        } 
+    </script>
+</head>
+<body>
+    <p id="para1">welcome to javascript</p>
+    <button onclick="myfunction1()">click</button>
+    <p id="para2">Javascript</p>
+    <button onclick="myfunction2()"> Click me</button>
+</body>
+</html>

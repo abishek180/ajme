@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: cyan;
+        }
+        #outer_wrapper{
+            width: 100%;
+            min-height: 600px;
+            margin: 0px;
+            border-radius: 20px;
+            border: 1px solid black;
+        }
+        #header_wrapper{
+            width: 100%;
+            height: 100px;
+            margin: 0px;
+            text-align: center;
+            /* border: 1px solid black; */
+        }
+        #center_wrapper{
+            width: 50%;
+            height: 400px;
+             border: 2px solid red; 
+             margin-left: auto;
+             margin-right: auto;
+        
+        }
+        #footer_wrapper{
+            width: 100%;
+            height: 50px;
+            /* border: 1px solid black; */
+            text-align: center;
+        }
+        #tbl1{
+            border: 1px solid black;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+            width: 40%;
+        }
+        #tbl1,tr,td{
+             border: 0px solid black; 
+             border-collapse: collapse; 
+             text-align: center;
+            
+        }
+        input[type="button"]{
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            width: 110px;
+            height: 40px;
+
+        }
+    
+    </style>
+    <script>
+        function setred(){
+             document.getElementById("center_wrapper").style.backgroundColor='red';
+            //document.body.style.backgroundColor="red";
+
+        }
+
+        function setgreen(){
+            
+            document.getElementById("center_wrapper").style.backgroundColor='green';
+        }
+        
+
+        function setblue(){
+            document.getElementById("center_wrapper").style.backgroundColor='blue';
+        } 
+       
+        
+
+        
+    </script>
+</head>
+<body>
+    <div id="outer_wrapper" name="outer_wrapper">
+        <!-- start of Outer Wrapper -->
+        <div id="header_wrapper" name="header_wrapper">
+                    <h1>Header</h1>
+        </div>
+        
+        <div id="center_wrapper" name="center_wrapper">
+             <form id="frm1" name="frm1" style="width: 100%;">
+                <table id="tbl1" name="tbl1" style="width: 100%;"> 
+                  <tr>
+                    <td><input type="button" onclick="setred()" id="btnred" value="Red"/></td>
+                <td><input type="button" onclick="setgreen()" id="btngreen" value="Green"/></td>
+                    <td><input type="button" onclick="setblue()" id="btnblue" value="Blue"/></td>
+                    <td><input type="button" onclick="setred()" id="btnyellow" value="Yellow"/></td>
+                  </tr> 
+            
+                
+        
+                </table>
+        </form> 
+        </div>
+        <!-- End of center wrapper -->
+        <div id="footer_wrapper" name="footer_wrapper">
+                <h6> design developed by footer</h6>
+        </div>
+        <!-- end of footer wrapper -->
+    </div>
+    <!-- End of Outer wrapper -->
+</body>
+</html>

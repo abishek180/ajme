@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        #mydiv{
+            width: 40%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+            bottom: 2px solid black;
+            height: 300px;
+            overflow-y: scroll;
+        }
+
+        dl > div{
+            background: #fff;
+            padding: 24px 0px 0px 0px;
+        }
+
+        dt{
+            background: #b8c1c8;
+            border-bottom: 1px solid #989ea4;
+            border-top: 1px solid #717d85;
+            color: #fff;
+            font:bold 18px/21px Helvetica,Arial,sans-serif;
+            margin: 0;
+            padding: 2px 0 0 12px;
+            position: -webkit-sticky;
+            position: sticky;
+            top: -1px;
+        }
+
+        dd{
+            font:bold 20px/45px helvetica,Arial,sans-serif;
+            margin: 0;
+            padding: 0 0 0 12px;
+            white-space: nowrap;
+        }
+
+        dd+dd{
+            border-top: 3px solid black;
+        }
+
+        dl > div:nth-child(even){
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="mydiv">
+        <dl>
+            <div>
+                <dt>A</dt>
+                <dd>Ajay1</dd>
+                <dd>Ajay2</dd>
+                <dd>Ajay3</dd>
+                <dd>Ajay4</dd>
+                <dd>Ajay5</dd>
+            </div>
+            <div>
+                <dt>B</dt>
+                <dd>Balu1</dd>
+                <dd>Balu12</dd>
+                <dd>Balu13</dd>
+                <dd>Balu14</dd>
+                <dd>Balu15</dd>
+                <dd>Balu16</dd>
+            </div>
+            <div>
+                <dt>C</dt>
+                <dd>C1</dd>
+                <dd>C2</dd>
+                <dd>C3</dd>
+                <dd>C4</dd>
+                <dd>C5</dd>
+                <dd>C6</dd>
+            </div>
+            <div>
+                <dt>D</dt>
+                <dd>D1</dd>
+                <dd>D2</dd>
+                <dd>D3</dd>
+                <dd>D4</dd>
+                <dd>D5</dd>
+                <dd>D6</dd>
+                <dd>D7</dd>
+            </div>
+        </dl>
+    </div>
+</body>
+</html>

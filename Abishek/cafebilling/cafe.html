@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe-billing</title>
+    <link rel="stylesheet" href="cafe.css">
+</head>
+<body>
+    <div id="main_container" name="main_container">
+        <header id="head1" name="head1">CAFE BILLING</header><hr>
+
+        <div id="division_row1" name="division_row1">
+            <div id="div1" name="div1" class="col1">Item</div>
+            <div id="div2" name="div2" class="col2">Qty</div>
+            <div id="div3" name="div3" class="col3">Unit Price</div>
+             <div id="div4" name="div4" class="col4">Confirm</div> 
+            <div id="div5" name="div5" class="col5">Total</div>
+        </div>
+        <div id="division_row2" name="division_row2">
+            <div id="item1" name="item1" class="col1"><select name="slctitem1" id="slctitem1" onchange="set_unitprice1()">
+                <option value="0">Select Item</option>
+                <option value="10">Tea</option>
+                <option value="20">Coffee</option>
+                <option value="50">Juice</option>
+                <option value="100">Meals</option>
+                <option value="40">Snacks</option>
+            </select></div>
+            <div id="qty1" name="qty1" class="col2"><select name="slctqty1" id="slctqty1" onchange="set_total1()">
+                <option value="0">Select Qty</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select></div>
+            <div id="unit_price1" name="unit_price1" class="col3">
+                <input id="txt_unit1" name="txt_unit1" type="text" readonly size="5" >
+            </div>
+
+            <div id="checkbox1" name="checkbox1" class="col4">
+                <input type="checkbox" id="chk_row1" name="chk_row1" onclick="set_grandtotal()">
+            </div>
+
+            <div id="div_total1" name="div_total1" class="col5">
+                <input id="txt_total1" name="txt_total1" type="text" readonly size="5" >
+            </div>
+
+
+        </div>
+        <!-- -------------------------------------------------------------- -->
+
+
+        <div id="division_row3" name="division_row3">
+            <div id="item2" name="item2" class="col1"><select name="slctitem2" id="slctitem2" onchange="set_unitprice2()">
+                <option value="0">Select Item</option>
+                <option value="10">Tea</option>
+                <option value="20">Coffee</option>
+                <option value="50">Juice</option>
+                <option value="100">Meals</option>
+                <option value="40">Snacks</option>
+            </select></div>
+            <div id="qty2" name="qty2" class="col2"><select name="slctqty2" id="slctqty2" onchange="set_total2()">
+                <option value="0">Select Qty</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select></div>
+            <div id="unit_price2" name="unit_price2" class="col3">
+                <input id="txt_unit2" name="txt_unit2" type="text" readonly size="5" >
+            </div>
+
+            <div id="checkbox2" name="checkbox2" class="col4">
+                <input type="checkbox" id="chk_row2" name="chk_row2" onclick="set_grandtotal()">
+            </div>
+
+            <div id="div_total2" name="div_total2" class="col5">
+                <input id="txt_total2" name="txt_total2" type="text" readonly size="5" >
+            </div>
+
+
+        </div>
+        <!-- ---------------------------------------------------------------------- -->
+
+
+        <div id="division_row4" name="division_row4">
+            <div id="item3" name="item3" class="col1"><select name="slctitem3" id="slctitem3" onchange="set_unitprice3()">
+                <option value="0">Select Item</option>
+                <option value="10">Tea</option>
+                <option value="20">Coffee</option>
+                <option value="50">Juice</option>
+                <option value="100">Meals</option>
+                <option value="40">Snacks</option>
+            </select></div>
+            <div id="qty3" name="qty3" class="col2"><select name="slctqty3" id="slctqty3" onchange="set_total3()">
+                <option value="0">Select Qty</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select></div>
+            <div id="unit_price3" name="unit_price3" class="col3">
+                <input id="txt_unit3" name="txt_unit3" type="text" readonly size="5" >
+            </div>
+
+            <div id="checkbox3" name="checkbox3" class="col4">
+                <input type="checkbox" id="chk_row3" name="chk_row3" onclick="set_grandtotal()">
+            </div>
+
+            <div id="div_total3" name="div_total3" class="col5">
+                <input id="txt_total3" name="txt_total3" type="text" readonly size="5" >
+            </div>
+
+
+        </div>
+        <!-- -------------------------------------------------------- -->
+        <div id="division_row5" name="division_row5">
+        <div class="col1"></div>
+        <div class="col2"></div>
+        
+        <div id="div_grandtotal" name="div_grandtotal" class="col3_4">Grand Total
+            <input type="text" readonly size="10" id="txt_grand_total" name="txt_grand_total">
+        </div>
+        </div>
+    </div>
+    <script src="cafe.js"></script>
+</body>
+</html>

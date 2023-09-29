@@ -1,0 +1,426 @@
+<!doctype html>
+<html>
+   <head>
+       <title>demo page</title>
+       <style>
+           body{
+	background-color: olive;
+           }
+          
+           #div1{
+	width:20%;
+                     min-height: 200px;	
+                     margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+                     background-color: cyan;	
+                     border:5px solid black;
+	border-radius:5px;
+           }
+
+
+	#outer_wrapper{	
+	width:100%;
+                     min-height:600px;
+                      margin:0px;
+                      border:2px solid black;
+                     border-radius:20px;	
+                 }
+
+	#header_wrapper{	
+	width:100%;
+                     height: 100px;               
+                      margin:0px;
+                      xborder:2px solid black;
+                     text-align:center;
+                 }
+
+
+	#footer_wrapper{	
+	width:100%;
+                     height:20px;
+                      margin-top:100px;
+                      border:2px solid olive;	
+                      text-align:center;
+                 }
+
+	#table1{
+		width:100%;
+		  margin-left:auto;
+	     	margin-right:auto;
+	     	margin-top:0px;
+		 background-color: cyan;
+                                    }
+
+	#table1,td,th{
+                            border:0px  solid black;
+	       border-collapse: collapse;
+                           text-align:center;
+	    
+                       }
+
+                 #txt_result{
+	     font-size: 30px;
+	    font-weight:  bold;
+	    text-align:right;
+                         width: 95%;
+	  height:40px;    
+                     }
+
+                 input[type = "button"], input[type = "reset"]{
+	     font-size: 30px;
+	    font-weight:  bold;
+	    text-align:center;
+                         width: 40px;
+	  height:40px;  
+                         }
+
+       </style>
+
+      <script language="javascript"  type="text/javascript">
+
+		let  first_operand;
+		let operator;
+		let second_operand;
+                                          let digit_len;
+                                          let  digit;
+		let result;
+                                          let flag_equals=0;
+
+
+	function validate_digits(){
+	 digit= document.getElementById("txt_result").value;
+                     digit = digit.trim();
+                    if(digit==""){digit=0;}
+	digit_len= digit.length;
+                    if(digit_len >= 3) { alert( "Maximum 3 digits allowed"); return false;}
+                      return true;
+                    }
+
+//--------------------------------------------------------
+	function set_seven(){              
+                                         if(validate_digits()){
+	digit= parseInt(digit);
+	digit=(digit * 10 )+ 7;
+	document.getElementById("txt_result").value= digit;
+                          }
+
+	}
+//------------------------------------end 7-------------
+//--------------------------------------------------------
+	function set_eight(){              
+                                         if(validate_digits()){
+	digit = parseInt(digit);
+	digit=(digit * 10 )+ 8;
+	document.getElementById("txt_result").value= digit;
+                          }
+
+	}
+//------------------------------------end 8-------------
+//--------------------------------------------------------
+	function set_nine(){              
+                                         if(validate_digits()){
+	digit = parseInt(digit);
+	digit=(digit * 10 )+ 9;
+	document.getElementById("txt_result").value= digit;
+                          }
+
+	}
+//------------------------------------end 9-------------
+
+
+//--------------------------------------------------------
+	function set_four(){              
+                                         if(validate_digits()){
+	digit = parseInt(digit);
+	digit=(digit * 10 )+ 4;
+	document.getElementById("txt_result").value= digit;
+                          }
+
+	}
+//------------------------------------end 4-------------
+//--------------------------------------------------------
+	function set_five(){              
+                                         if(validate_digits()){
+	digit = parseInt(digit);
+	digit=(digit * 10 )+ 5;
+	document.getElementById("txt_result").value= digit;
+                          }
+
+	}
+//------------------------------------end 5-------------
+//--------------------------------------------------------
+	function set_six(){              
+                                         if(validate_digits()){
+	digit = parseInt(digit);
+	digit=(digit* 10 )+ 6;
+	document.getElementById("txt_result").value= digit;
+                          }
+
+	}
+//------------------------------------end 6-------------
+//--------------------------------------------------------
+	function set_one(){              
+                                         if(validate_digits()){
+	digit = parseInt(digit);
+	digit=(digit* 10 )+ 1;
+	document.getElementById("txt_result").value= digit;
+                          }
+
+	}
+//------------------------------------end 1-------------
+//--------------------------------------------------------
+	function set_two(){              
+                                         if(validate_digits()){
+	digit = parseInt(digit);
+	digit=(digit* 10 )+ 2;
+	document.getElementById("txt_result").value= digit;
+                          }
+
+	}
+//------------------------------------end 2-------------
+//--------------------------------------------------------
+	function set_three(){              
+                                         if(validate_digits()){
+	digit = parseInt(digit);
+	digit=(digit* 10 )+ 3;
+	document.getElementById("txt_result").value= digit;
+                          }
+
+	}
+//------------------------------------end 3------------
+//--------------------------------------------------------
+	function set_zero(){              
+                                         if(validate_digits()){
+	digit = parseInt(digit);
+	digit=(digit* 10 );
+	document.getElementById("txt_result").value= digit;
+                          }
+
+	}
+//------------------------------------end 0------------
+
+//---------------------------------------------
+      function fun_add(){
+    
+                    first_operand= document.getElementById("txt_result").value;
+                    first_operand = parseInt(first_operand);
+    	 operator = "+";
+                   document.getElementById("txt_result").value= 0;
+                   flag_equals=1;
+             
+
+     }
+//------------------------------end fun add-----------------------------
+
+//---------------------------------------------
+      function fun_divide(){
+    
+                    first_operand= document.getElementById("txt_result").value;
+                    first_operand = parseInt(first_operand);
+    	 operator = "/";
+                   document.getElementById("txt_result").value= 0;
+                   flag_equals=1;
+             
+
+     }
+//------------------------------end fun divide----------------------------
+
+
+//---------------------------------------------
+      function fun_multiply(){
+    
+                    first_operand= document.getElementById("txt_result").value;
+                    first_operand = parseInt(first_operand);
+    	 operator = "*";
+                   document.getElementById("txt_result").value= 0;
+                   flag_equals=1;
+             
+
+     }
+//------------------------------end fun multiply----------------------------
+
+
+//---------------------------------------------
+      function fun_subtract(){
+    
+                    first_operand= document.getElementById("txt_result").value;
+                    first_operand = parseInt(first_operand);
+    	 operator = "-";
+                   document.getElementById("txt_result").value= 0;
+                   flag_equals=1;
+             
+
+     }
+//------------------------------end fun subtract----------------------------
+
+//---------------------------------------------
+      function fun_modulus(){
+    
+                    first_operand= document.getElementById("txt_result").value;
+                    first_operand = parseInt(first_operand);
+    	 operator = "%";
+                   document.getElementById("txt_result").value= 0;
+                   flag_equals=1;
+             
+
+     }
+//------------------------------end fun subtract----------------------------
+
+
+
+
+function fun_equal(){
+
+if(flag_equals==1)
+{
+
+ second_operand= document.getElementById("txt_result").value;
+second_operand = parseInt(second_operand);
+    if(operator == "+"){
+                       result=(  first_operand  + second_operand);
+	document.getElementById("txt_result").value=result;
+               }
+     else if(operator == "/"){
+                       result= (first_operand / second_operand);
+	document.getElementById("txt_result").value=result;
+               }
+       else if(operator == "*"){
+                       result= (first_operand * second_operand);
+	document.getElementById("txt_result").value=result;
+               }
+        else if(operator == "-"){
+                       result= (first_operand - second_operand);
+	document.getElementById("txt_result").value=result;
+               }
+          else if(operator == "%"){
+                       result= (first_operand % second_operand);
+	document.getElementById("txt_result").value=result;
+               }
+
+
+flag_equals=0;
+               
+}
+}
+//------------------------------------------------------------------
+
+
+     </script>
+   </head>
+   <body>
+           <div id="outer_wrapper"  name="outer_wrapper">
+                         <div id="header_wrapper"  name="header_wrapper">
+                                   <!-- <img src="img4.jpg"  alt="sorry filenot found" width="100%"  height="100%"   />-->
+                                       <h1> H E A D E R</h1>
+                          </div>
+      
+             <!-- ----------------------------------------------------------------------  -->
+       	<div id="div1" name="div1">
+         	   <form name="frm1" id="frm1">
+            	        <table  id="table1" name="table1" >
+		 <tr>
+                                            <th colspan="4" style="width:100%;">
+	                            <h3> C A L C U L A T O R</h3>
+		</th>
+                                    </tr>
+                                    <!--    -----------------------end of row1-----------------  -->
+                                    <tr>
+                                            <td colspan="4" style="width:100%;">
+			<input type="text" name="txt_result"  id="txt_result"  maxlength="3"  readonly/>
+		</td>
+                                    </tr>
+                                    <!--    -----------------------end of row1-----------------  -->
+
+	                <tr>
+                                            <td>
+			<input type="button" name="btn_seven"  id="btn_seven"  value="7"  onclick="set_seven()" />
+		</td>
+		 <td>
+			<input type="button" name="btn_eight"  id="btn_eight"  value="8"  onclick="set_eight()" />
+		</td>
+		 <td>
+			<input type="button" name="btn_nine"  id="btn_nine"  value="9"  onclick="set_nine()" />
+		</td>
+		 <td>
+			<input type="button" name="btn_division"  id="btn_division"  value="/"  onclick="fun_divide()"/>
+		</td>
+                                    </tr>
+                                    <!--    -----------------------end of row2-----------------  -->
+
+
+		   <tr>
+                                            <td>
+			<input type="button" name="btn_four"  id="btn_four"  value="4"  onclick="set_four()"/>
+		</td>
+		 <td>
+			<input type="button" name="btn_five"  id="btn_five"  value="5"  onclick="set_five()"/>
+		</td>
+		 <td>
+			<input type="button" name="btn_six"  id="btn_six"  value="6" onclick="set_six()" />
+		</td>
+		 <td>
+			<input type="button" name="btn_mutiply"  id="btn_mutiply"  value="*"  onclick="fun_multiply()"/>
+		</td>
+                                    </tr>
+                                    <!--    -----------------------end of row3-----------------  -->
+
+
+		   <tr>
+                                            <td>
+			<input type="button" name="btn_one"  id="btn_one"  value="1"  onclick="set_one()" />
+		</td>
+		 <td>
+			<input type="button" name="btn_two"  id="btn_two"  value="2"   onclick="set_two()"/>
+		</td>
+		 <td>
+			<input type="button" name="btn_three"  id="btn_three"  value="3"  onclick="set_three()"/>
+		</td>
+		 <td>
+			<input type="button" name="btn_minus"  id="btn_minus"  value="-" onclick="fun_subtract()" />
+		</td>
+                                    </tr>
+                                    <!--    -----------------------end of row4-----------------  -->
+
+
+	                  <tr>
+                                            <td>
+			<input type="button" name="btn_zero"  id="btn_zero"  value="0"  onclick="set_zero()" />
+		</td>
+		 <td>
+			<input type="button" name="btn_dot"  id="btn_dot"  value="." />
+		</td>
+		 <td>
+			<input type="button" name="btn_modulus"  id="btn_modulus"  value="%"  onclick="fun_modulus()"/>
+		</td>
+		 <td>
+			<input type="button" name="btn_plus"  id="btn_plus"  value="+"  onclick="fun_add()"/>
+		</td>
+                                    </tr>
+                                    <!--    -----------------------end of row5-----------------  -->
+
+
+		   <tr>
+                                            <td  colspan="2">
+			<input type="button" name="btn_equal"  id="btn_equal"  value= "="  style="width:100%;"  onclick="fun_equal()" />
+		</td>
+		 <td colspan="2">
+			<input type="reset" name="btn_clear"  id="btn_clear"  value="Clear"  style="width:100%;"  />
+		</td>
+		
+                                    </tr>
+                                    <!--    -----------------------end of row6-----------------  -->
+                   
+            	          </table>
+         	     </form>
+      	 </div>
+
+            <!-- ----------------------------------------------------------------------  -->
+	  <div id="footer_wrapper"  name="footer_wrapper">
+                                  Designed and developed by:
+                          </div>
+
+           </div>
+   </body>
+
+</html>

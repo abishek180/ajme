@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(240, 240, 240);
+}
+
+
+.main_container{
+    width: 80%;
+    height: 500px;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#img_sec{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+
+}
+#img_sec img{
+    width: 450px;
+}
+.ctrl_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 130px;
+    gap: 500px;
+
+}

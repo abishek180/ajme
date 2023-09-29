@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colorbox3</title>
+    <style>
+        #outer_wrapper{
+            width: 100%;
+            height: 600px;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+        header{
+            width: 100%;
+            height: 150px;
+
+        }
+        section{
+            width: 100%;
+            height: 380px;
+
+        }
+        footer{
+            width: 100%;
+            height: 40px;
+        }
+        table{
+            width: 50%;
+            border: 2px solid black;
+            margin-left: auto;
+            margin-right: auto;
+            border-collapse: collapse;
+        }
+        td{
+            border: 0px solid black;
+            text-align: center;
+        }
+        #div1{
+            border: 1px solid black;
+            width: 50%;
+            height: 80px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        #div2{
+            border: 1px solid black;
+            width: 50%;
+             /* float: right;  */
+            height: 80px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #slct1{
+            width: 20%;
+            
+            text-align: center;
+        }
+    </style>
+    <script>
+        function color(){
+            let value=document.getElementById("slct1").value;
+            if(document.getElementById("chkbody").checked){
+                document.body.style.backgroundColor=value;
+            }else{
+            document.body.style.backgroundColor="white";
+            }
+
+            if(document.getElementById("chkdiv").checked){
+                document.getElementById("div1").style.backgroundColor=value;
+                document.getElementById("div2").style.backgroundColor=value;
+            }else{
+                document.getElementById("div1").style.backgroundColor="white";
+                document.getElementById("div2").style.backgroundColor="white";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="outer_wrapper" name="outer_wrapper">
+        <header>
+
+        </header>
+
+        <section>
+            <form id="frm1" name="frm1">
+                <table>
+                    <tr>
+                        <td style="width: 50%;"><input type="checkbox" id="chkbody" onclick="color()">Body</td>
+                        <td style="width: 50%;"><input type="checkbox" id="chkdiv" onclick="color()">Div</td>
+                    </tr>
+                     <tr> 
+                        <td colspan="2" style="width: 100%;"><select id="slct1" name="slct1" onchange="color()">
+                            <option value="White">Select Color</option>
+                            <option value="Violet">Violet</option>
+                            <option value="Indigo">Indigo</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Green">Green</option>
+                            <option value="Yellow">Yellow</option>
+                            <option value="Orange">Orange</option>
+                            <option value="Red">Red</option>
+                        </select></td>
+                    </tr>
+                     <tr> 
+                        <td>&nbsp;&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><div id="div1" name="div1">DIV1</div></td>
+                        <td><div id="div2" name="div2">DIV2</div></td>
+                     </tr> 
+                </table>
+            </form>
+
+        </section>
+
+         <footer>
+
+         </footer>
+    </div>
+</body>
+</html>

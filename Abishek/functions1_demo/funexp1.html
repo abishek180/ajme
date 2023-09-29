@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p id="para2"> Fuga tempore quam impedit expedita facilis,</p>
+        <p id="para3"> illum aperiam eius distinctio laudantium assumenda tempora! Debitis dolores odio ab, obcaecati aliquid eaque excepturi a!</p>
+    <script>
+
+        let a = 10;
+        let b = 10;
+        const x = function(a,b) {return a * b};
+        document.getElementById("para").innerHTML = x(5,5);
+
+
+        let fname = "Abishek";
+        let lname = "A";
+        const y = function(fname,lname) { return fname+" "+lname};
+        // document.getElementById("para2").innerHTML =y(fname,lname);
+        // document.getElementById("para2").innerHTML =y("ajay","chand");
+        document.getElementById("para2").innerHTML = y;
+
+        (function(){
+            document.getElementById("para3").innerHTML = "hello i called myself"
+        })();
+
+        (function(){
+            document.getElementById("para3").innerHTML = "hello world"
+        })();
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.main_container{
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top:20px;
+    overflow: hidden;
+}
+
+#div1{
+    margin-top: 100px;
+}
+#div2{
+    margin-top: 200px;
+    
+}
+#txt_box{
+    resize: none;
+    width: 400px;
+    height: 300px;
+}

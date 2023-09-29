@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num =  407;
+        let digit;
+        let len = num.toString().length;
+        //alert(len);
+        
+        let sum_digit =0;
+    
+        let my_digit=1;
+        for(let i = num;i>0;i=parseInt(i/10)){
+            digit=i%10;
+            my_digit=1;
+          
+            my_digit=Math.pow(digit,len);
+            alert(my_digit);
+            sum_digit=sum_digit+my_digit;
+            // alert(sum_digit);
+
+        
+        }
+        if(sum_digit==num){
+            document.write("the e number is armstrong number"+num);
+        }else{
+            document.write("not a armstrong");
+        }
+    </script>
+</body>
+</html>

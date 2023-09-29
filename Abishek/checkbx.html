@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkbox</title>
+    <style>
+        body{
+            background-color: blueviolet;
+        }
+        #outer_wrapper{
+            width: 100%;
+            height: 600px;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+        header{
+            width: 100%;
+            height: 150px;
+            /* margin-left: auto; */
+            /* margin-right: auto; */
+            text-align: center;
+        }
+        section{
+            width: 100%;
+            height: 380px;
+            border: 0px solid black;
+        }
+        footer{
+            width: 100%;
+            height: 50px;
+            border: 0px solid black;
+            text-align: center;
+            bottom: 10px;
+        }
+        #tbl1{
+            width: 40%;
+            margin-left: auto;
+            margin-right: auto;
+            border: 2px solid black;
+            border-collapse: collapse;
+            margin-top: 80px;
+        }
+        tr,td{
+            border: 2px solid black;
+            
+        }
+        #image1{
+            width: 50%;
+            margin-left: auto;
+            height: 100%;
+        }
+
+        
+    </style>
+    <script>
+        function setp1(){
+            if (document.getElementById("parachk").checked==true){
+                document.getElementById("tdpara1").style.backgroundColor='yellow';
+            }else{
+                // alert("hi");
+                document.getElementById("tdpara1").style.backgroundColor='blueviolet';
+            }
+
+        }
+// end of setp1----------------------------------------
+        function seth1(){
+            let x = document.getElementById("h1chk");
+            if (x.checked==true){
+                document.getElementById("tdh1").style.backgroundColor="yellow";
+            }else{
+                document.getElementById("tdh1").style.backgroundColor="blueviolet";
+            }
+            
+        }
+        // end of seth1--------------------------------------------
+        function setdiv(){
+            let x = document.getElementById("h1chk");
+            if (x.checked==true){
+                document.getElementById("tddv1").style.backgroundColor="yellow";
+            }else{
+                document.getElementById("tddv1").style.backgroundColor="blueviolet";
+            }
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <div id="outer_wrapper" name="outer_wrapper">
+        <header>
+            <img src="sea.jpeg" alt="sea image" id="image1" name="image1"/>
+
+        </header>
+
+        <section>
+            <form id="frm1" name="frm1">
+                <table id="tbl1" name="tbl1">
+                    <tr>
+                        <td colspan="3" id="tdpara1"><p id="para1" name="para1">Paragraph</p></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" id="tdh1"><h1 id="hd1" name="hd1">Heading1</h1></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" id="tddv1"><div id="dv1" name="dv1">DIV</div></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" value="p1" id="parachk"  name="parachk"
+                            onclick="setp1()"/>paragraph</td>
+                        <td><input type="checkbox" value="H1" id="h1chk" name="h1chk"
+                            onclick="seth1()"/>heading</td>
+                        <td><input type="checkbox" value="DIV" id="divchk"
+                            onclick="setdiv()"/>div</td>
+                    </tr>
+                </table>
+            </form>
+            <footer>
+                <h6>Designed and developed by<br>Javascript </h6>
+    
+            </footer>
+
+        </section>
+
+      
+
+    </div>
+    <!-- end of outer wrpper -->
+</body>
+</html>

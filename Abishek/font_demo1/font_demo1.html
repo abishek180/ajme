@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="font._demo1.css">
+</head>
+<body>
+    <div class="main_container" id="main_container" name="main_container">
+        <div id="div1" name="div1"><select name="set_family" id="set_family" onchange="set_fontfamily()">
+            <option value="">Select Font</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Arial">Arial</option>
+            <option value="Helvetica">Helvetica</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Times">Times</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Lucida Handwriting">Lucida Handwriting</option>
+            <option value="Copperplate">Copperplate</option>
+            
+        </select>
+    <select name="sel_size" id="sel_size" onchange="set_fontsize()">
+        <option value="0px">Select Size</option>
+    <option value="10px">10px</option>
+    <option value="20px">20px</option>
+    <option value="30px">30px</option>
+    <option value="40px">40px</option>
+    <option value="50px">50px</option>
+    <option value="60px">60px</option>
+    <option value="70px">70px</option>
+    <option value="80px">80px</option>
+    <option value="90px">90px</option>
+    <option value="100px">100px</option>
+</select>
+<input type="button" value="B" id="btn_bold" name="btn_bold" onclick="set_bold()">
+<input  type="hidden" value="0" id="txthide_bold" name="txthide_bold"/>
+<input type="button" value="I" id="btn_italic" name="btn_italic" onclick="set_italic()">
+<input type="hidden" value="0" name="txthide_italic" id="txthide_italic">
+<input type="button" value="U" id="btn_under" name="btn_under" onclick="set_underline()">
+<input type="hidden" value="0" name="txthide_under" id="txthide_under">
+<br>
+<textarea name="txt_box" id="txt_box" cols="65" rows="20"></textarea>  
+
+</div>
+        
+        <!-- <div id="div2" name="div2" >Hello World</div>   -->
+       
+
+    </div>
+    
+    <script src="font_demo1.js"></script>
+</body>
+</html>

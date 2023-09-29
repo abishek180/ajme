@@ -1,0 +1,22 @@
+body{
+    background-color: cyan;
+    display: flex;
+    justify-content: center;
+}
+.main_container{
+    width: 600px;
+    height: 600px;
+    border: 2px solid black;
+}
+.main_container h1{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+#division{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}

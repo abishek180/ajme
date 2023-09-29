@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+
+        #outer_wrapper{
+            width: 100%;
+            height: 600px;
+            border: 0px solid black;
+            border-radius: 20px;
+        }
+        header{
+            width: 100%;
+            height: 100px;
+            background-color: black;
+
+        }
+        #center_wrapper{
+            width: 50%;
+            min-height: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+            /* border: 2px solid black; */
+        }
+        footer{
+            width: 100%;
+            height: 40px;
+            background-color: black;
+        }
+        table{
+             border: 1px solid black; 
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0px;
+            height: 100%;
+        }
+        #btn{
+            text-align: center;
+            width: 100px;
+            height: 40px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        table,td,tr{
+            text-align: center;
+        }
+        section{
+            height: 200px;
+            border: 0px solid black;
+            width: 100%;
+            background-color: red;
+        }
+        
+    </style>
+    <script>
+        function setcolor(){
+            let x = document.getElementById("txt_1").value;
+             document.getElementById("tble2").style.backgroundColor=x;
+        
+        }
+    </script>
+</head>
+<body>
+    <div id="outer_wrapper" name="outer_wrapper">
+    <header>
+        Header
+    </header>
+        
+    
+    <!-- End of header wrapper -->
+    <div id="center_wrapper" name="center_wrapper">
+        <form id="frm1" name="frm1">
+            <section >
+            <table id="tble2">
+                <tr>
+                    <td>Enter the Color</td>
+                     <td><input type="text" id="txt_1" name="txt_1"/></td>
+                </tr>
+                <!-- end of row -->
+                <tr >
+                    <td colspan="2"><input type="button" id="btn" name="btn" value="SetColor" 
+                        onclick="setcolor()"/></td>
+
+                </tr>
+            </table>
+            </section>
+        </form>
+    </div>
+    <!-- End of center wrapper -->
+
+    <footer>
+        footer
+    </footer>
+    <!-- End of footer wrapper -->
+    </div>
+    <!-- End of outer wrapper -->
+</body>
+</html>

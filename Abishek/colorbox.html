@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colorbox</title>
+    <style>
+        body{
+            background-color: bisque;
+        }
+        #outer_wrapper{
+            width: 100%;
+            height: 600px;
+            border: 2px solid black;
+            border-radius: 25px;
+        }
+        header{
+            width: 100%;
+            height: 150px;
+        }
+        section{
+            width: 100%;
+            height: 380px;
+            border: 0px solid black;
+        }
+        footer{
+            width: 100%;
+            height: 50px;
+        }
+        table{
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            border: 2px solid black;
+        }
+        #div1{
+            width: 50%;
+            height: 80px;
+            margin-top: 80px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            border: 1px solid black;
+            bottom: 40px;
+        }
+        td,tr{
+            border: 0px solid blue;
+        }
+        td{
+            text-align: center;
+        }
+        
+    </style>
+    <script>
+        let x = "white";
+        function funcolor_v(){
+            x = "violet";
+            setcolor();
+        }
+        function funcolor_i(){
+            x = "indigo";
+            setcolor();
+        }
+        function funcolor_b(){
+            x = "blue";
+            setcolor();
+        }
+        function funcolor_g(){
+            x = "green";
+            setcolor();
+        }
+        function funcolor_y(){
+            x = "yellow";
+            setcolor();
+        }
+        function funcolor_o(){
+            x = "orange";
+            setcolor();
+        }
+        function funcolor_r(){
+            x = "red";
+            setcolor();
+        }
+
+
+
+
+        function setcolor(){
+            if(document.getElementById("rad1").checked==true){
+                document.body.style.backgroundColor=x;
+
+            }else{
+                document.body.style.backgroundColor="white";
+            }
+            // ---------------------------------------------------------------------
+            if(document.getElementById("rad2").checked==true)
+            {
+                document.getElementById("div1").style.backgroundColor=x;
+            }else{
+                document.getElementById("div1").style.backgroundColor="white";
+            }
+          
+            
+        }
+    </script>
+</head>
+<body>
+    <div id="outer_wrapper" name="outer_wrapper">
+        <header>
+
+        </header>
+
+        <section>
+            <form id="frm1" name="frm1">
+                <table>
+                    <tr>
+                        <td colspan="3" ><input type="checkbox" value="body1" id="rad1"
+                            name="rad1body" onclick="setcolor()">Body</td>
+                        <td colspan="4"><input type="checkbox" value="div1" id="rad2"
+                            name="rad1div" onclick="setcolor()">Div</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7">&nbsp;</td>
+                    </tr>
+                    <tr>
+                         <td>
+                            <input type="radio" value="violet" id="radv" name="radcolor" onclick="funcolor_v()">Violet</td>
+                        <td><input type="radio" value="indigo" id="radi" name="radcolor" onclick="funcolor_i()">Indigo</td>
+                        <td><input type="radio" value="blue" id="radb" name="radcolor" onclick="funcolor_b()">Blue</td>
+                        <td><input type="radio" value="green" id="radg" name="radcolor" onclick="funcolor_g()">Green</td>
+                        <td><input type="radio" value="yellow" id="rady" name="radcolor" onclick="funcolor_y()">Yellow</td>
+                        <td><input type="radio" value="orange" id="rado" name="radcolor" onclick="funcolor_o()">Orange</td>
+                        <td><input type="radio" value="red" id="radr" name="radcolor" onclick="funcolor_r()">Red</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7" id="td1" name="td1"><div id="div1" name="div1">Welcome to javascript</div></td>
+                    </tr>
+                    <tr>
+                        <td colspan="7">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7">&nbsp;</td>
+                    </tr>
+                </table>
+
+            </form>
+            
+
+        </section>
+
+        <footer>
+            
+        </footer>
+    </div>
+</body>
+</html>

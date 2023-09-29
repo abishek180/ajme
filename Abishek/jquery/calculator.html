@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        body{
+            background-color: #081b29;
+        }
+
+        #outer_wrapper{
+            width: 100%;
+            min-height: 600px;
+            margin: 0px;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+        #header_wrapper{
+            width: 100%;
+            height: 100px;
+            margin: 0px;
+            text-align: center;
+        }
+        #footer_wrapper{
+            width: 100%;
+            height: 20px;
+            margin-top: 100px;
+            border: 2px solid olive;
+            text-align: center;
+        }
+        #center_wrapper{
+            width: 20%;
+            min-height: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            background-color: #112e42;
+            border: 5px solid black;
+            border-radius: 5px;
+
+        }
+        #tbl1 {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0px;
+            background-color: yellowgreen;
+        }
+        #tbl1,td,th{
+            text-align: center;
+            border:0px solid black;
+            border-collapse:collapse;
+
+        }
+        #txt_rslt{
+            font-size: 30px;
+            font-weight: bold;
+            text-align: right;
+            width: 95%;
+            height: 40px;
+
+        }
+
+        input[type="button"],input[type="reset"]{
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+  
+</head> 
+<body>
+    <div id="outer_wrapper" name="outer_wrapper">
+        <div id="header_wrapper" name="header_wrapper"><h1>Header</h1>
+        </div>
+        <div id="center_wrapper" name="center_wrapper">
+            <form id="frm1" name="frm1">
+<table id="tbl1" name="tbl1">
+                        <tr>
+<th colspan="4" style="width: 100%;">
+   <h3>Calculator</h3> 
+</th>
+                        </tr>
+<!-- end of row 1-------------------------------------------------------- -->
+                        <tr>
+                            <td colspan="4" style="width: 100%;">
+<input type="text" id="txt_rslt" name="txt_rslt" maxlength="3" readonly/>
+                            </td>
+
+                        </tr>
+                        <!-- end of row 2---------------------------------- -->
+                        <tr>
+                            <td>
+                                <input class="clk" type="button" id="btn_7" name="btn_7"
+                                value="7" onclick="set_7()"/>
+                            </td>
+                            <td>
+                                <input class="clk"  type="button" id="btn_8" name="btn_8" 
+                                value="8" onclick="set_8()"/>
+                            </td>
+                            <td>
+                                <input class="clk"  type="button" id="btn_9" name="btn_9" 
+                                value="9" onclick="set_9()"/>
+                            </td>
+                            <td>
+                                <input class="clk"  type="button" id="btn_division" name="btn_division" 
+                                value="/" onclick="set_division()"/>
+                            </td>
+                        </tr>
+                        <!-- end of row 3--------------------------------- -->
+                        <tr>
+                            <td>
+                                <input class="clk"  type="button" id="btn_4" name="btn_4" 
+                                value="4" onclick="set_4()"/>
+                            </td>
+                            <td>
+                                <input class="clk"  type="button" id="btn_5" name="btn_5" 
+                                value="5" onclick="set_5()"/>
+                            </td>
+                            <td>
+                                <input class=text"clk"  type="button" id="btn_6" name="btn_6" 
+                                value="6" onclick="set_6()"/>
+                            </td>
+                            <td>
+                                <input class="clk"  type="button" id="btn_multiply" name="btn_multiply" 
+                                value="*" onclick="set_multiply()"/>
+                            </td>
+                        </tr>
+                        <!-- end of row 4----------------------------- -->
+                        <tr>
+                            <td>
+                                <input class="clk"  type="button" id="btn_1" name="btn_1" 
+                                value="1" onclick="set_1()"/>
+                            </td>
+                            <td>
+                                <input class="clk"  type="button" id="btn_2" name="btn_2" 
+                                value="2" onclick="set_2()"/>
+                            </td>
+                            <td>
+                                <input class="clk"  type="button" id="btn_3" name="btn_3" 
+                                value="3" onclick="set_3()"/>
+                            </td>
+                            <td>
+                                <input class="clk"  type="button" id="btn_diff" name="btn_diff" 
+                                value="-" onclick="set_diff()"/>
+                            </td>
+                        </tr>
+                        <!-- end of row 5------------------------------- -->
+                        <tr>
+                            <td>
+                                <input class="clk"  type="button" id="btn_0" name="btn_0" 
+                                value="0" onclick="set_0()"/>
+                            </td>
+                            <td>
+                                <input class="clk"  type="button" id="btn_dot" name="btn_dot" 
+                                value="."/>
+                            </td>
+                            <td>
+                                <input class="clk"  type="button" id="btn_module" name="btn_module" 
+                                value="%" onclick="set_module()"/>
+                            </td>
+                            <td>
+                                <input class="clk"  type="button" id="btn_plus" name="btn_plus" 
+                                value="+" onclick="set_plus()"/>
+                            </td>
+                        </tr>
+                        <!-- end of row 6-------------------------------- -->
+                        <tr>
+                            <td colspan="2">
+                                <input class=""  type="button" id="btn_equal" name="btn_equal" 
+                                value="=" onclick="set_equal()" style="width: 100%; text-align: center;"/>
+                            </td>
+                            <td colspan="2">
+                                <input class="equal"  type="reset" id="btn_clear" name="btn_clear" 
+                                value="C" onclick="set_clear()" style="width: 100%; text-align: center;"/>
+                            </td>
+
+                        </tr>
+                    </table>
+
+                </form>
+
+            </div>
+            <!-- end of center wrapper------------------------------------- -->
+            <div id="footer_wrapper" name="footer_wrapper">Designed and Developed;
+            </div>
+            <!-- end of footer wrapper------------------------------------- -->
+        </div>
+        <!-- end of outer wrapper------------------------------------------- -->
+        
+    <script src="calculator.js"></script>
+</body>
+</html>

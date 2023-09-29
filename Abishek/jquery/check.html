@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #main_container{
+            border: 2px solid black;
+            width: 30%;
+            min-height: 50%;
+            margin-top: 80px;
+            
+        }
+        #input_1{
+            display: flex;
+
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#chk_para").click(function(){
+                if( $("#chk_para").is(":checked")){
+            $("p").css("background-color","yellowgreen");
+           }else{
+            $("p").css("background-color","white");
+            
+           }
+            });
+            // -----------------------------------------
+            $("#chk_h1").click(function(){
+                if( $("#chk_h1").is(":checked")){
+            $("h1").css("background-color","yellowgreen");
+           }else{
+            $("h1").css("background-color","white");
+            
+           }
+            });
+            // ---------------------------------------
+
+            $("#chk_div").click(function(){
+                if( $("#chk_div").is(":checked")){
+            $("#division").css("background-color","yellowgreen");
+           }else{
+            $("#division").css("background-color","white");
+            
+           }
+            });
+
+          
+
+
+        });
+    </script>
+
+
+</head>
+<body>
+    <div id="main_container">
+    <div><p>Paragraph</p></div>
+    <div><h1>heading</h1></div>
+    <div  id="division">DIV</div>
+<div id="input_1">
+    <input id="chk_para" type="checkbox" value="Paragraph">Paragraph
+    <input id="chk_h1" type="checkbox" value="H1">H1
+    <input id="chk_div" type="checkbox" value="div">Div
+</div>
+
+    </div>
+</body>
+</html>

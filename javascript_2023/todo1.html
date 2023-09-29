@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo</title>
+    <style type="text/css">
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400);
+
+        body{
+            font: normal normal 13px/16px  "Open Sans", sans-serif;
+            background: #dfdfdf;
+        }
+
+        .container{
+
+            padding:20px;
+            width:400px;
+            margin:0 auto;
+            margin-top: 40px;
+            background: white;
+            border-radius: 5px;
+            border: 2px solid black;
+        }
+
+        form{
+            display: inline-block;
+        }
+
+        input{
+            padding:4px  15px  4px  5px;
+        }
+
+        #button{
+
+            display:inline-block;
+            background-color: #fc999b;
+            color:#ffffff;
+            border-radius: 5px;
+            text-align:center;
+            margin-top: 2px;
+            padding: 5px 15px;
+        }
+
+        #button:hover,#btnresult:hover{
+            cursor: pointer;
+            opacity: 0.8;
+        }
+
+        ol{ padding-left: 20px;}
+
+        ol li { padding: 5px; color:#000;}
+
+        ol li:nth-child(even){ background:#dfdfdf;}
+
+        .strike{ text-decoration: line-through;}
+
+        li:hover{
+            cursor: pointer;
+        }
+
+        .mycheckclass{
+            border: 1px solid  red;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+                let  v_totalcount =0;
+                let v_chkid=0;
+
+
+                $("#button").click(function(){
+
+                    v_chkid= v_chkid+1;
+
+                    let v_checkbox = "<input type='checkbox' name='vchkbox[]' id='obj'"+v_chkid+"' class='mycheckclass' />";
+
+                    let temp = "temp"+v_chkid;
+
+                    let toAdd = $('input[name=ListItem]').val();
+
+                    toAdd = toAdd.trim();
+                    if(toAdd == "") { alert("please enter topic");return false;}
+
+                    let myimage= "<img src='cancel.png'  alt='sorry' style='float:right;width:20px;height:20px;'  />";
+
+                    $('ol').append('<li id='+temp+'>'+v_checkbox+toAdd+myimage+'</li>');
+
+                    myfunction("add");
+
+
+                    
+
+
+                    //-------------------------
+                });
+
+
+
+                    function myfunction(pmode){
+
+                            switch(pmode){
+
+                                case "add": ++v_totalcount;break;
+                                case "sub": --v_totalcount;break;
+                                default: break;
+                            }
+
+
+                            let  numberOfChecked =0;
+                            let totalCheckboxes=0;
+                            let  numberNotChecked =0;
+
+
+
+                            let boxes = $(":checkbox:checked");
+                            //alert(boxes.length);
+
+                            numberOfChecked = parseInt(boxes.length);
+                            totalCheckboxes = parseInt(v_totalcount);
+
+                            numberNotChecked = parseInt(totalCheckboxes)-parseInt(numberOfChecked);
+
+                            $("#divtotal").text("");
+                            $("#divtotal").text("Total todos:"+totalCheckboxes);
+                            $("#divcompleted").text("");
+                            $("#divcompleted").text("Completed todos:"+numberOfChecked);
+                            $("#divpending").text("");
+                            $("#divpending").text("Pending todos:"+numberNotChecked);
+
+                    }// end function -----------------------------
+
+
+
+                    $('input').focus(function (){
+
+                        $(this).val('');
+                    });
+
+                    //-------------------------------
+
+
+                    $(document).on('dblclick','img',function(){
+
+                            let chkdel = $(this).parent().attr('id');
+
+                            $(this).parent().toggleClass('strike').fadeOut(1000,function(){
+
+                                let  chksub = "#obj"+chkdel.substring(4);
+                               // alert(chksub);
+                                  $(chksub).prop("checked",false);
+                                $(chksub).remove();
+                                chkdel = "#"+chkdel;
+                            $(chkdel).remove();
+                               $(this).remove();
+                                myfunction("sub");
+
+
+                            });
+
+
+                    });//---------------end nn---------------------
+
+
+
+                    $(document).on('click','input[type=checkbox]',function(){
+
+                            myfunction("normal");
+
+                    });
+        //-------------------------------    
+        });
+    </script>
+</head>
+<body>
+     <div class="container">
+        <form name="todoList" id="todoList">
+            <input type="text"  name="ListItem"/>
+
+        </form>
+
+        <div id="button">Add</div>
+        &nbsp;&nbsp;
+       
+        <br/>
+
+        <ol></ol>
+
+        <br/><br/>
+
+        <div id="divtotal"></div>
+        <div id="divcompleted"></div>
+        <div id="divpending"></div>
+
+
+
+
+
+     </div>
+    
+</body>
+</html>

@@ -1,0 +1,107 @@
+body{
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+
+}
+.main_container{
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    
+    
+}
+.main_container h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#qns_sec1{
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+#qns_sec2{
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+#btn1_temp{
+    display: none;
+}
+#btn2_temp{
+    display: none;
+}
+#btn3_temp{
+    display: none;
+}
+#btn4_temp{
+    display: none;
+}
+#btn5_temp{
+    display: none;
+}
+#btn6_temp{
+    display: none;
+}
+#btn7_temp{
+    display: none;
+}
+#btn8_temp{
+    display: none;
+}
+
+
+
+#btn_reset1{
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    
+}
+
+#btn_reset2{
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    
+}
+
+.questions{
+    display: flex;
+    justify-content: space-between;
+    
+    border:0px solid black;
+
+    
+}
+
+#reset_btn{
+    width: 80px;
+    height: 30px;
+
+}
+#sub_btn{
+    width: 80px;
+    height: 30px;
+
+}
+
+#testdiv{
+    border:0px solid blue;
+}
+#qns1{
+    border:0px solid red;
+}
+
+#qns_part_B{
+    display: none;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="oexam.css">
+</head>
+<body>
+    <div class="main_container" id="main_container" name="main_container">
+        <div class="h1" id="h1" name="h1">
+        <h1>Online Exam</h1>
+        <hr>
+        </div>
+        <div id="qns_sec" name="qns_sec">
+            <div class="questions" id="questions" name="questions">
+              <div id="qns1" name="qns1">1. Sun Rises in the East</div>
+              <div id="testdiv"><input type="radio" id="btn1_tru" name="btn1_q1" value="True">True
+                    <input type="radio" id="btn1_fal" name="btn1_q1" value="False">False
+                    <input type="radio" id="btn1_temp" name="btn1_q1" value="T">
+              </div>
+                </div>
+            <div class="questions" id="questions" name="questions">
+                <span id="qns2" name="qns2">2. 2 + 3 = 5</span>
+                <span><input type="radio" id="btn2_tru" name="btn2_q2" value="True">True
+                <input type="radio" id="btn2_fal" name="btn2_q2" value="False">False
+                <input type="radio" id="btn2_temp" name="btn2_q2" value="T"></span>
+            </div>    
+            <div class="questions" id="questions" name="questions">
+                <span id="qns3" name="qns3">3. H <sub>2</sub>o = Hydrogen</span>
+                <span><input type="radio"  id="btn3_tru" name="btn3_q3" value="True">True
+                <input type="radio"  id="btn3_fal" name="btn3_q3" value="False">False
+                <input type="radio"  id="btn3_temp" name="btn3_q3" value="T"></span>
+            </div>
+            <div class="questions" id="questions" name="questions">
+                <span id="qns4" name="qns4">4. HTML is a Programing Language</span>
+                <span><input type="radio"  id="btn4_tru" name="btn4_q4" value="True">True
+                <input type="radio"  id="btn4_fal" name="btn4_q4" value="False">False
+                <input type="radio"  id="btn4_temp" name="btn4_q4" value="T"></span>
+            </div>
+            <div class="questions" id="questions" name="questions">
+                <span id="qns5" name="qns5">5. Leap Year has 30 days</span>
+                <span><input type="radio"  id="btn5_tru" name="btn5_q5" value="True">True
+                <input type="radio"  id="btn5_fal" name="btn5_q5" value="False">False
+                <input type="radio"  id="btn5_temp" name="btn5_q5" value="T"></span>
+            </div>
+
+
+            
+        </div>
+        <div id="btn_reset">
+            <input type="reset" id="reset_btn" name="reset_btn" value="clear" onclick="reset_fn()">
+            <input type="submit" id="sub_btn" name="sub_btn" value="submit" onclick="submit_fn()">
+        </div>
+
+    </div>
+    <script src="oexam.js"></script>
+</body>
+</html>

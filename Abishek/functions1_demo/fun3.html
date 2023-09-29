@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        fullname1();
+
+
+        let f2name = "Abishek2";
+        let l2name = "A2";
+        fullname2(f2name,l2name);
+
+
+        let k = fullname3();
+        alert("your name is "+k);
+
+        let f4name = "Abishek4";
+        let l4name = "A4";
+        let m = fullname4(f4name,l4name);
+        alert("your name is "+m);
+
+
+        function fullname1(){
+            let fname  = "abishek";
+            let mname = "";
+            let lname = "A";
+            let result = fname+" "+mname+" "+lname;
+
+            alert("Your name is "+result);
+        }
+
+        function fullname2(p_f2name,p_l2name){
+
+            let result2 = p_f2name+" "+p_l2name;
+            alert("Your name is"+result2);
+
+        }
+
+        function fullname3(){
+            let f3name = "Abishek3";
+            let l3name = "A3";
+            let result3 = f3name+" "+l3name;
+            return result3;
+        }
+
+        function fullname4(p_f4name,p_l4name){
+
+            let result4 = p_f4name+" "+p_l4name;
+
+            return result4;
+
+        }
+    </script>
+</body>
+</html>

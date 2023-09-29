@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        product1();
+
+        let x = 5;
+        let y = 3;
+        product2(x,y);
+
+        let k = product3();
+        alert("product3 value is"+k);
+
+        let m = 100;
+        let n = 100;
+        let p = product4(m,n);
+        alert("product4 value is "+p);
+
+
+
+        function product1(){
+            let x = 5;
+            let y = 2;
+            let z = x * y;
+
+            alert("product1 value is"+z);
+        }
+
+        function product2(a,b){
+            let c = a * b;
+
+            alert("product2 value is"+c);
+
+
+        }
+
+        function product3(){
+            let x = 5;
+            let y = 4;
+            let z = x * y;
+
+            return z;
+        }
+
+        function product4(m1,n1){
+            let result = m1 * n1;
+
+            return result;
+        }
+
+    </script>
+</body>
+</html>

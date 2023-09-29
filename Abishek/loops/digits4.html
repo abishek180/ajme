@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = 3465;
+        let digit;
+        let large = num%10;
+        let small =num%10;
+        for(let i = num;i>0;i=parseInt(i/10)){
+            digit=i%10;
+            if(digit>large){
+                large=digit;
+            }
+
+
+        }
+        document.write(large+"largest digit");
+    </script>
+</body>
+</html>
